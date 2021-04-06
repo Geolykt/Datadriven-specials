@@ -7,6 +7,11 @@
     		"r": 45,
     		"g": 206,
     		"b": 217
-    	}
+    	},
+    	"technology": 10.0,
+    	"industry": 10.0,
+    	"stabillity": 0.01,
+    	"peacefullness": 1.0,
+    	"alliances": false
     }
 ]

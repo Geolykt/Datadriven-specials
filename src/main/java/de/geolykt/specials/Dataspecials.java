@@ -106,7 +106,16 @@ public class Dataspecials extends Extension {
             int ordinal = Registry.EMPIRE_SPECIALS.getValues().length;
             String internalName = name.toUpperCase();
             NamespacedKey registryKey = new NamespacedKey(this, "SPECIAL_" +  internalName);
-            Special builtSpecial = new Special(internalName, ordinal, name, abbreviation, description, internalColor);
+
+            // Modifiers
+            float techMod = special.optFloat("technology", 1.0F);
+            float indMod = special.optFloat("industry", 1.0F);
+            float stabillityMod = special.optFloat("stabillity", 1.0F);
+            float peaceMod = special.optFloat("peacefullness", 1.0F);
+            boolean banAlliances = !special.optBoolean("alliances", true);
+
+            Meta meta = new Meta(techMod, indMod, stabillityMod, peaceMod, banAlliances);
+            Special builtSpecial = new Special(internalName, ordinal, name, abbreviation, description, internalColor, meta);
             Registry.EMPIRE_SPECIALS.register(registryKey, builtSpecial);
         }
     }
