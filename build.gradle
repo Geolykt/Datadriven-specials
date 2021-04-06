@@ -1,0 +1,36 @@
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'java-library'
+    id 'maven-publish'
+    id 'widener-plugin' version '1.0.0'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+}
+
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '11'
+
+repositories {
+    maven {
+        name 'geolykt'
+        url 'https://geolykt.de/maven'
+    }
+    maven {
+        name 'sponge'
+        url 'https://repo.spongepowered.org/maven'
+    }
+    mavenCentral()
+    mavenLocal()
+}
+
+widener {
+    accessWidener = "src/main/resources/accesswidener.accesswidener"
+    affectedFile = "galimulator-desktop.jar"
+}
+
+dependencies {
+    compileOnly files("galimulator-desktop.jar") // Galimulator proper
+    compileOnly "de.geolykt:starloader:1.1.0-SNAPSHOT" // The minimalistic starloader base "api" as well all of it's depends
+    compileOnly "de.geolykt:starloader-api:1.1.0-SNAPSHOT" // The more complicated starloader API
+
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20210307'
+}

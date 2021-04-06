@@ -1,0 +1,6 @@
+{
+  "entrypoint": "de.geolykt.specials.Dataspecials",
+  "name": "DatadrivenSpecials",
+  "version": "1.0.0-SNAPSHOT",
+  "accessWidener": "accesswidener.accesswidener"
+}

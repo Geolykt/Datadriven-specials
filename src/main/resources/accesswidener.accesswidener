@@ -1,0 +1,12 @@
+accessWidener   v2     intermediary
+
+# Notice to maintainers: Please avoid removing these as they still persist and pollute the galimulator jar even after removal.
+# Notice to maintainers: This access widener file is only used in compile time!
+
+# ---------------------------------------------------------
+# Compiler tricks (Compile time only)
+# ---------------------------------------------------------
+
+# Enums
+denumerised      class   snoddasmannen/galimulator/EmpireSpecial
+extendable       method  snoddasmannen/galimulator/EmpireSpecial                     <init>      (Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

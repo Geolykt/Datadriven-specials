@@ -1,0 +1,12 @@
+[
+    {
+    	"name": "Example",
+    	"abbreviation": "EXP",
+    	"description": "An example special",
+    	"color": {
+    		"r": 45,
+    		"g": 206,
+    		"b": 217
+    	}
+    }
+]

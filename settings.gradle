@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenLocal()
+        maven {
+            name = 'Geolykt'
+            url = 'https://geolykt.de/maven/'
+        }
+    }
+}
+
+rootProject.name = 'Datadriven-Specials'
